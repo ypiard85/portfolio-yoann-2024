@@ -2,32 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  /* color: #0e0e5f7f; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.projetswiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.projet-dard img {
+  transition: transform 1s;
+  /* Ajoutez une transition pour l'animation */
+}
+
+.projet-dard:hover img {
+  transform: rotate(-5deg);
+  /* Appliquez la transformation lors du survol */
+}
+
+
+.marquee span {
+  color: #fff;
+  display: inline-block;
+  padding-left: 0;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 96px;
+  opacity: .5;
+}
+
+.marquee2 span {
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: transparent;
 }
